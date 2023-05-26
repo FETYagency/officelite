@@ -1,0 +1,74 @@
+:root{
+    --CLR_HS_blue: hsl(228, 100%, 66%);
+    --CLR_LS_blue: hsl(228, 100%, 75%);
+    --CLR_LS_blueDark: hsl(228, 22%, 26%);
+    --CLR_HS_blueDark: hsl(229, 22%, 19%);
+    --CLR_HS_red: hsl(0, 83%, 65%);
+    --CLR_grey:hsl(227, 13%, 52%);
+
+    --FF_var: 'kumbh_sansregular';
+    
+    font-size: 15px;
+    
+    
+    --FS_HXL: 3.73rem;
+    --LH_HXL: 4.26rem;
+
+    --FS_HL: 1.33rem;
+    --LH_HL: 1.73rem;
+    
+    --FS_HM: 1.08rem;
+    --LH_HM: 3.2rem;
+    --TT_HM: uppercase;
+    
+    --WGHT-bold: 700;
+    
+    --FS_body_one: 1.2rem;
+    --LH_body_one: 1.86rem;
+    
+    --FS_body_two: 1.08rem;
+    --LH_body_two: 1.86rem;
+    
+    --WGHT-reg: 400;
+
+}
+
+/* buttons */
+
+a,button{
+    text-decoration: none;
+    font-size: inherit;
+    display: inline-block;
+    inline-size: min(171px,100%);
+    block-size: 56px;
+    display: grid;
+    place-items: center;
+    border-radius: 1.86rem;
+    font-weight: var(--WGHT-bold);
+    transition: all .3s ease;
+}
+/* button one */
+.BTN_ONE{
+    background-color: var(--CLR_HS_blue);
+    color: white;
+}
+.BTN_ONE:hover{
+    background-color: var(--CLR_LS_blue);
+}
+/* button two */
+.BTN_TWO{
+    background-color: hsl(228, 100%, 66%,.15);
+    color: var(--CLR_HS_blue);
+}
+.BTN_TWO:hover{
+    background-color: hsl(228, 100%, 66%,.25);
+}
+/* button three */
+.BTN_THREE{
+    background-color: white;
+    color: var(--CLR_HS_blue);
+}
+.BTN_THREE:hover{
+    color: var(--CLR_LS_blue);
+    background-color: white;
+}

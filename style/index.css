@@ -1,0 +1,404 @@
+@import url(reset.css);
+@import url(vars.css);
+
+:root{
+
+    /* vars fo the intro section */
+    --HEADER_BLOCK_PDNG:3.06rem 5.33rem;
+    --offset: 327px;
+    --intro_section_GRID_GAP: 3.06rem;
+    --charts_hero_INLINE_SIZE:min(171px,100%);
+
+    /* vars fo the pricing cards section */
+    --type_AND_price__h3_MARGIN-BLOCK-END: 1.66rem;
+    --type_AND_price__p_MARGIN-BLOCK-START: 10px;
+    --feature_PADDING_BLOCK: 3.53rem 2.13rem;
+
+    
+}
+body{
+    font-family: var(--FF_var);
+    background-color: #FAFAFA;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+.wrapper{
+    min-height: 100vh;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+
+    
+    /* current path variables */
+    padding-block:var(--HEADER_BLOCK_PDNG);
+    max-inline-size: var(--offset);
+    margin-inline: auto;
+    
+}
+
+/* intro section *//* intro section *//* intro section */
+
+
+.intro_section{
+    margin-inline: auto;
+    text-align: center;
+    position: relative;
+    
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+
+    /* current path variables */
+    max-width: var(--offset);
+    gap: var(--intro_section_GRID_GAP);
+    /* container making */
+    container-type: inline-size;
+}
+
+/* the img of the intro section */
+.charts_hero{
+    inline-size: var(--charts_hero_INLINE_SIZE);
+}
+
+/* text content container */
+.intro_article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+}
+.intro_article a{
+    box-shadow: 3px 10px 10px hsl(228, 100%, 66%,.3);
+}
+/* text content for the intro section */
+
+.intro_header,.bold_number{
+    font-size: clamp(.5rem,9cqi,var(--FS_HXL));
+    line-height: clamp(.8rem,10cqi,var(--LH_HXL));
+    font-weight: var(--WGHT-bold);
+    color: var(--CLR_HS_blueDark);
+}
+.intro_body{
+    font-size: clamp(.5rem,9cqi,var(--FS_body_two));
+    line-height: clamp(.8rem,10cqi,var(--LH_body_two));
+    font-weight: var(--WGHT-reg);
+    color: var(--CLR_grey);
+}
+
+/* PRICING CARDS WRAPPER*/
+.pricing_cards_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 2.13rem;
+
+    max-inline-size: var(--offset);
+    margin-inline: auto;
+}
+
+
+
+/* PRICING CARDS*/
+.card{
+    background-color: #fff;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+    border-radius: 13px;
+    padding-block: 2.66rem;
+
+    /* container making */
+    container-type: inline-size;
+}
+.card:nth-child(2){
+    background-color: var(--CLR_HS_blue);
+    color: #fff !important;
+}
+/* TO INHERIT THE WHITE COLOR FROM ITS PARTENT AND TO OVERRIDE THE ELEMENT INHERIT FROM THE GENERAL CLASS */
+.card:nth-child(2) .type_AND_price,
+.card:nth-child(2) .features,
+.card:nth-child(2) .bold_number,
+.card:nth-child(2) li{
+    color: inherit;
+}
+
+/* PRICING CARDS => type */
+.type_AND_price{
+    color: var(--CLR_HS_blueDark);
+}
+.type_AND_price>h3{
+    font-weight: var(--WGHT-bold);
+    font-size: var(--FS_HM);
+    line-height: var(--LH_HM);
+
+    /* current path variable */
+    margin-block-end: var(--type_AND_price__h3_MARGIN-BLOCK-END);
+}
+.type_AND_price>p{
+    font-size: clamp(.5rem,4cqi,var(--FS_body_two));
+    line-height: clamp(.8rem,5cqi,var(--LH_body_two));
+    font-weight: var(--WGHT-reg);
+
+    /* current path variable */
+    margin-block-start: var(--type_AND_price__p_MARGIN-BLOCK-START);
+}
+
+
+
+/* PRICING CARDS => features */
+.features{
+    color: var(--CLR_grey);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+
+    /* current path variebles */
+    padding-block: var(--feature_PADDING_BLOCK);
+}
+
+
+
+
+/* offer delay section*/
+.offer_delay{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding-block: 6.66rem;
+    max-inline-size: var(--offset);
+    margin-inline: auto;
+}
+.delay_header{
+    font-size: var(--FS_HM);
+    line-height: var(--LH_HM);
+    font-weight: var(--WGHT-bold);
+    text-transform: var(--TT_HM);
+    color: #fff;
+    margin-block-end: 1.2rem;
+}
+.delay_header>span{
+    font-size: var(--FS_HM);
+    line-height: var(--LH_HM);
+    font-weight: var(--WGHT-bold);
+    text-transform: var(--TT_HM);
+    color: var(--CLR_HS_blue);
+}
+
+
+/* clock styling */
+.clock{
+    display: flex;
+    justify-content: space-between;
+    inline-size: 100%;
+    margin-block-end: 2.66rem;
+}
+.clock>div{
+    inline-size: 72px;
+    max-inline-size: 100%;
+    padding-block: .7rem;
+    border-radius: 4px;
+    background-color: var(--CLR_LS_blueDark);
+}
+.bold_colock_num{
+    font-size: 2.2rem;
+    font-weight: var(--WGHT-bold);
+    color: #fff;
+}
+.clock_type{
+    color: var(--CLR_grey);
+}
+
+
+
+/* adding the last section a background */
+
+.offer_section{
+    position: relative;
+    padding-block: 6.66rem 0;
+}
+.background{
+    position: absolute;
+    inset-inline: 0;
+    inset-block: 37.7% 0;
+    background-color: var(--CLR_HS_blueDark);
+    z-index: -1;
+    overflow: hidden;
+}
+.background>img{
+    position: absolute;
+    inset-inline: 50% auto;
+    inset-block: 55% auto;
+    transform: translate(-50%, -50%)
+}
+
+
+/* tablet version *//* tablet version *//* tablet version */
+/* media query */
+    @media(width>=690px) and (width<=1100px){
+        :root{
+            --offset:689px;
+            --charts_hero_INLINE_SIZE:281px;
+            --type_AND_price__h3_MARGIN-BLOCK-END: .5rem;
+            --feature_PADDING_BLOCK:0;
+        }
+
+        header{
+            justify-content: flex-start;
+        }
+        .intro_section{
+            grid-template-columns: auto auto;
+            place-items: start;
+        
+        }
+        
+        /* the img of the intro section */
+        .charts_hero{
+            grid-column: 2/3;
+            justify-self: end;
+        }
+        
+        /* text content container */
+        .intro_article{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            text-align: start;
+            align-items: flex-start;
+        }
+        /* text content for the intro section */
+        
+        .intro_header,.bold_number{
+            font-size: clamp(.5rem,6cqi,var(--FS_HXL));
+            line-height: clamp(.8rem,7cqi,var(--LH_HXL));
+        }
+
+
+        /* pricing cards */
+
+
+        .card{
+            text-align: start;
+            grid-template-columns: 1fr 1fr;
+            place-items: start;
+            padding-inline: 2.66rem;
+            gap: 5px;
+        }
+        /* PRICING CARDS => features */
+        .features{
+            align-self: end;
+        }
+        /* clock styling */
+        .clock{
+            justify-content: center;
+            gap: 1rem;
+        }
+        .clock>div{
+            inline-size: 100px;
+            padding-block: 1rem;
+
+        }
+        .bold_colock_num{
+            font-size: 3.73rem;
+            margin-block-end: 5px;
+        }
+        /* adding the last section a background */
+
+        .background>img{
+            position: absolute;
+            inset-inline: 50% auto;
+            inset-block: 70% auto;
+            transform: translate(-50%, -50%)
+        }
+
+    }
+
+    /* desktop version */   /* desktop version */   /* desktop version */
+
+    @media(width>=1100px){
+        :root{
+            --offset: 1100px;
+            --charts_hero_INLINE_SIZE:475px;
+        }
+
+
+        header{
+            justify-content: flex-start;
+        }
+
+
+
+        /* intro section */
+
+        .intro_section{
+            text-align: start;
+            grid-template-columns: 1fr 1fr;
+            place-items: center start;
+        }
+        
+        /* the img of the intro section */
+        .charts_hero{
+            grid-column: 2/3;
+            justify-self: end;
+        }
+        
+        /* text content container */
+        .intro_article{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            align-items: flex-start;
+        }
+
+
+        /* PRICING CARDS WRAPPER*/
+        .pricing_cards_wrapper{
+            flex-direction: row;
+            gap: 2.13rem;
+        }
+
+
+
+        /* PRICING CARDS*/
+        .card{
+            min-inline-size: 327px;
+            flex: 1;
+        }
+        
+        /* clock styling */
+
+
+        .offer_delay{
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            text-align: start;
+        }
+        
+        
+        
+        .clock{
+            justify-content: center;
+            gap: 1rem;
+            text-align: center;
+        }
+        .clock>div{
+            inline-size: 100px;
+            padding-block: 1rem;
+        
+        }
+        .bold_colock_num{
+            font-size: 3.73rem;
+             margin-block-end: 5px;
+        }
+        /* adding the last section a background */
+        
+        .background>img{
+            position: absolute;
+            inset-inline: 50% auto;
+            inset-block: 70% auto;
+            transform: translate(-50%, -50%)
+        }
+    }
+    
